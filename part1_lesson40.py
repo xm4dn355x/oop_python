@@ -42,7 +42,64 @@ class Employee(Person):
         print(f'{self.name} works in {self.company}')
 
 
+class Kettle:
+
+    def turn_on(self):
+        print('Нажимаем кнопку включения')
+        self.__boil()
+        self.__check_temp()
+        self.__beep()
+        self._turn_off()
+
+    def __boil(self):
+        print('Разогревание воды')
+
+    def __check_temp(self):
+        print('Проверяем температуру воды')
+
+    def __beep(self):
+        print('Подаём звуковой сигнал')
+
+    def _turn_off(self):
+        print('Отключение')
+
+
+class Vehicle:
+
+    def __init__(self, name, model, **kwargs):
+        self.name = name
+        self.model = model
+        if 'passengers_max' in kwargs:
+            self.passengers_max = kwargs['passengers_max']
+        else:
+            self.passengers_max = 1
+
+
+class Car(Vehicle):
+
+    def __init__(self, name, model, **kwargs):
+        super().__init__(name, model, **kwargs)
+        if 'fwd' in kwargs:
+            self.fwd = kwargs['fwd']
+        else:
+            self.fwd = False
+
+
+class Plane(Vehicle):
+
+    def __init__(self, name, model, **kwargs):
+        super().__init__(name, model, **kwargs)
+        if 'max_height' in kwargs:
+            self.max_height = kwargs['max_height']
+        else:
+            self.max_height = False
+
+
 if __name__ == '__main__':
     employee = Employee('John', 27)
     employee.print_info()
     print(employee.tits)
+    audi = Car(name='Audi', model='A3 3.0', passengers_max=5, fwd=True)
+    print(audi.__dict__)
+    airbus = Plane(name='Airbus', model='A320', passengers_max=300, max_height=10000)
+    print(airbus.__dict__)
