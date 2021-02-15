@@ -35,8 +35,9 @@ class Person:
 class Employee(Person):
     company = 'SC'
 
-    # def __init__(self):
-    #     pass
+    def __init__(self, name: str, age: int, company: str):
+        super(Employee, self).__init__(name=name, age=age)
+        self.company = company
 
     def more_info(self):
         print(f'{self.name} works in {self.company}')
@@ -96,8 +97,9 @@ class Plane(Vehicle):
 
 
 if __name__ == '__main__':
-    employee = Employee('John', 27)
+    employee = Employee('John', 27, 'CIA')
     employee.print_info()
+    employee.more_info()
     print(employee.tits)
     audi = Car(name='Audi', model='A3 3.0', passengers_max=5, fwd=True)
     print(audi.__dict__)
