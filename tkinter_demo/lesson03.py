@@ -85,7 +85,7 @@ time_button = Button(
 time_button.pack()
 
 button_clicker = Button(
-master=root,
+    master=root,
     text='Кликер',
     height=1,   # В знакоместах
     width=12,   # В знакоместах
@@ -100,6 +100,7 @@ master=root,
 button_clicker.pack()
 
 button_turn_back = Button(
+    master=root,
     text='-1',
     height=1,   # В знакоместах
     width=12,   # В знакоместах
