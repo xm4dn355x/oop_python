@@ -65,12 +65,13 @@ main_frame.pack(fill='both', expand=1, padx=10, pady=10)
 # bordermode            inside outside          Границы контейнера (хз вообще)
 # height, width         int pixels              Высота и ширина в пикселях
 # relheight relwidth    float 0.0-1.0           Высота элемента относительно родительского контейнера в процентах
+# Элементы могут рисоваться друг поверх друга
 
 l1 = TemplateLabel(master=main_frame, text='Test1')
 l1.place(x=0, y=0, anchor='nw')
 
 l2 = TemplateLabel(master=main_frame, text='Test2')
-l2.place(relx=0.5, rely=0.5, anchor='c')
+l2.place(relx=0.2, rely=0.2, anchor='c')
 
 
 if __name__ == '__main__':
