@@ -10,14 +10,9 @@
 
 
 from tkinter import Tk, Label, Frame, LabelFrame, Button, Text, Scrollbar
+from .dark_theme_colors import COLOR_TEXT, COLOR_BASE, COLOR_OVERFLOW, COLOR_OVERLAY_LIGHT, COLOR_OVERLAY_DARK, \
+    COLOR_SURFACE
 
-COLOR_OVERLAY_LIGHT = '#383B40'  # active clicked button
-COLOR_OVERLAY_DARK = '#2D2F34'  # foreground element
-COLOR_SURFACE = '#27292D'  # button, label or some other element
-COLOR_BASE = '#1F2023'  # Base element background
-COLOR_OVERFLOW = '#010101'  # all app background
-
-COLOR_TEXT = '#FFFFFF'  # Text color
 
 ROOT_WINDOW_WIDTH = 500
 ROOT_WINDOW_HEIGHT = 400
