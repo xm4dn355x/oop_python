@@ -10,7 +10,7 @@
 
 
 from tkinter import Tk, Label, Frame, LabelFrame, Button, Text, Scrollbar
-from .dark_theme_colors import COLOR_TEXT, COLOR_BASE, COLOR_OVERFLOW, COLOR_OVERLAY_LIGHT, COLOR_OVERLAY_DARK, \
+from dark_theme_colors import COLOR_TEXT, COLOR_BASE, COLOR_OVERFLOW, COLOR_OVERLAY_LIGHT, COLOR_OVERLAY_DARK, \
     COLOR_SURFACE
 
 
