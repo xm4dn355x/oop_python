@@ -36,7 +36,7 @@ menu_file.add_command(label='Открыть')
 menu_file.add_command(label='Сохранить')
 menu_file.add_command(label='Закрыть')
 menu_file.add_separator()
-menu_file.add_command(label='Выйти')
+menu_file.add_command(label='Выйти', command=root.quit)
 # Edit
 menu_edit = Menu(master=main_menu, tearoff=0, bg=COLOR_BASE, fg=COLOR_TEXT)
 menu_edit.add_command(label='Отменить')
